@@ -1,0 +1,15 @@
+{
+  "name": "fullstack-27-a-proyecto-ecommerce-preview",
+  "version": "1.0.0",
+  "description": "estructura backend express mongo ecommerce",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alejandro",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
