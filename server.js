@@ -1,9 +1,9 @@
 import { connect } from './config.js';
 import express from "express";
 // import productRoutes from './routes/productRoutes.js';
-// import supplierRoutes from './routes/supplierRoutes.js';
-// import salesorderRouter from './routes/salesorderRoutes.js';
-// import shoppingbasketRoutes from './routes/shoppingbasketRoutes.js';
+import supplierRoutes from './routes/supplierRoutes.js';
+import salesorderRoutes from './routes/salesorderRoutes.js';
+import shoppingbasketRoutes from './routes/shoppingbasketRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 
@@ -21,8 +21,8 @@ api.get('/test', (req, res) => {
 });
 
 //api.use("/products", productRoutes);
-//api.use("/suppliers", supplierRoutes);
-//api.use("/orders", salesorderRouter);
-//api.use("/baskets", shoppingbasketRoutes);
+api.use("/suppliers", supplierRoutes);
+api.use("/orders", salesorderRoutes);
+api.use("/baskets", shoppingbasketRoutes);
 api.use("/users", userRoutes);
 api.use("/auth", authRoutes);

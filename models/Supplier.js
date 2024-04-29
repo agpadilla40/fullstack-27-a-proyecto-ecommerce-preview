@@ -1,41 +1,32 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-    firstName: {
-        type: String,
-        required: true
-    },
-    lastName: {
-        type: String,
-        required: true
-    },
-    email: {
+const supplierSchema = new mongoose.Schema({
+    rfc: {
         type: String,
         required: true,
         unique: true
     },
-    mobile: {
+    businessName: {
+        type: String,
+        required: true
+    },
+    productLine: {
+        type: String,
+        required: true
+    },
+    contactName: {
+        type: String,
+        required: true
+    },
+    telephoneContact: {
         type: String,
         required: true,
     },
-    shippingAddress: {
+    contactEmail: {
         type: String,
         required: true,
-    },
-    username: {
-        type: String,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true,
-    },
-    role: {
-        type: String,
-        required: true,
-        enum: ['ADMIN', 'USER'],
-        default: "USER",
-    },
+        unique: true
+    }, 
     createdAt: {
         type: Date,
         default: Date.now(),
@@ -50,4 +41,4 @@ const userSchema = new mongoose.Schema({
     },
 });
 
-export default mongoose.model("User", userSchema);
+export default mongoose.model("Supplier", supplierSchema);
