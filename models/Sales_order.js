@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const salesorderSchema = new mongoose.Schema({
-    product: {
+const sales_orderSchema = new mongoose.Schema({
+    name: {
         type: String,
         required: true,
         unique: true
@@ -10,23 +10,24 @@ const salesorderSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    unitPrice: {
+    price: {
         type: Number,
         required: true
     },
-    requestedQuantity: {
+    quantity: {
         type: Number,
         required: true
     },
-    extendedPrice: {
+    cartTotal: {
         type: Number,
         required: true
     },
+    
     freightCost: {
         type: Number,
         required: true
     },
-    totalPrice: {
+    grandTotal: {
         type: Number,
         required: true
     },
@@ -68,4 +69,4 @@ const salesorderSchema = new mongoose.Schema({
     },
 });
 
-export default mongoose.model("Salesorder", salesorderSchema);
+export default mongoose.model("Sales_order", sales_orderSchema);

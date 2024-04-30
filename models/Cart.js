@@ -1,32 +1,24 @@
 import mongoose from "mongoose";
 
-const shoppingbasketSchema = new mongoose.Schema({
-    product: {
+const cartSchema = new mongoose.Schema({
+    image: {
+        type: String,
+        required: true
+    },
+    name: {
         type: String,
         required: true,
         unique: true
     },
-    requestedQuantity: {
+    price: {
         type: Number,
         required: true
     },
-    unitPrice: {
+    quantity: {
         type: Number,
         required: true
-    },
-    productsQuantity: {
-        type: Number,
-        required: true
-    },
-    totalAmount: {
-        type: Number,
-        required: true,
-    },
-    freightCost: {
-        type: Number,
-        required: true
-    },
-    grandTotal: {
+    },    
+    cartTotal: {
         type: Number,
         required: true
     }, 
@@ -44,4 +36,4 @@ const shoppingbasketSchema = new mongoose.Schema({
     },
 });
 
-export default mongoose.model("Shoppingbasket", shoppingbasketSchema);
+export default mongoose.model("Cart", cartSchema);
