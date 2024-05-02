@@ -1,6 +1,6 @@
 import { connect } from './config.js';
 import express from "express";
-// import productRoutes from './routes/productRoutes.js';
+import productRoutes from './routes/productRoutes.js';
 import supplierRoutes from './routes/supplierRoutes.js';
 import sales_orderRoutes from './routes/sales_orderRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
@@ -20,7 +20,7 @@ api.get('/test', (req, res) => {
     res.send('Mensajes en terminal desplegándose');
 });
 
-//api.use("/products", productRoutes);
+api.use("/products", productRoutes);
 api.use("/suppliers", supplierRoutes);
 api.use("/orders", sales_orderRoutes);
 api.use("/carts", cartRoutes);

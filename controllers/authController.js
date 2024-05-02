@@ -60,7 +60,7 @@ const login = async (req, res) => {
       //crear un token
       const payload = {
         email: user.email,
-        role: user.role,
+        rol: user.rol,
       };
       const token = jwt.encode(payload, process.env.SECRET);
       //regresar un token
